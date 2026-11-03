@@ -1,5 +1,5 @@
 const PREFIX='nidhi-shell-'+encodeURIComponent(self.registration.scope)+'-';
-const CACHE=PREFIX+'local-app-v22';
+const CACHE=PREFIX+'local-app-v25';
 const SHELL=['./','./index.html','./style.css','./app-style.css','./app.js','./auth.js','./qr-transfer.js','./qr-protocol.js','./analysis.js','./stats.js','./record-row.js','./record-row.css','./calendar-periods.js','./reminders.js','./app-shell.js','./ledger.js','./install.js','./updates.js','./icon.svg','./icon-192.png','./icon-512.png','./manifest.webmanifest','./vendor/jszip.min.js','./vendor/qrcode.js','./vendor/qr-scanner.min.js','./vendor/qr-scanner-worker.min.js'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL.map(path=>new Request(path,{cache:'reload'}))))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith(PREFIX)&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

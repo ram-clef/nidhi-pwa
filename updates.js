@@ -3,7 +3,15 @@ const banner=document.createElement('section');banner.className='update-banner';
 // Keep the notice in the content column, including when an older stylesheet is cached.
 banner.style.cssText='position:relative;inset:auto;transform:none;width:100%;max-width:100%;box-sizing:border-box;display:none;flex-wrap:wrap;align-items:center;gap:12px;padding:14px;margin:0 0 16px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;z-index:auto';
 banner.innerHTML='<div><b>Update available</b><small>Your saved records and PIN stay on this device.</small></div><button class="primary" id="apply-update">Update now</button><button class="text-btn" id="later-update">Later</button>';(document.querySelector('.workspace')||document.querySelector('main')).prepend(banner);
-function available(worker){waiting=worker;banner.hidden=false;banner.style.display='flex';banner.scrollIntoView({block:'nearest',behavior:'smooth'})}
+function placeNotice(){
+ if(document.body.classList.contains('app-locked')){
+  document.body.append(banner);Object.assign(banner.style,{position:'fixed',top:'12px',left:'12px',right:'12px',bottom:'auto',width:'auto',maxWidth:'calc(100vw - 24px)',zIndex:'190',margin:'0'});
+ }else{
+  (document.querySelector('.workspace')||document.querySelector('main')).prepend(banner);Object.assign(banner.style,{position:'relative',top:'auto',left:'auto',right:'auto',bottom:'auto',width:'100%',maxWidth:'100%',zIndex:'auto',margin:'0 0 16px'});
+ }
+}
+new MutationObserver(placeNotice).observe(document.body,{attributes:true,attributeFilter:['class']});
+function available(worker){waiting=worker;placeNotice();banner.hidden=false;banner.style.display='flex';if(!document.body.classList.contains('app-locked'))banner.scrollIntoView({block:'nearest',behavior:'smooth'})}
 banner.querySelector('#later-update').onclick=()=>{banner.hidden=true;banner.style.display='none'};
 banner.querySelector('#apply-update').onclick=()=>{if(document.querySelector('dialog[open]')){alert('Finish or close the open dialog before updating.');return}if(!waiting)return;if(waiting.state==='activated'){location.reload();return}reloading=true;waiting.postMessage({type:'SKIP_WAITING'});banner.querySelector('#apply-update').disabled=true};
 if('serviceWorker'in navigator){navigator.serviceWorker.addEventListener('controllerchange',()=>{if(reloading)location.reload();else if(navigator.serviceWorker.controller)available(navigator.serviceWorker.controller)});

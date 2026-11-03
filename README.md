@@ -84,3 +84,6 @@ Upload all contents of this folder, including `vendor/`, `.nojekyll`, `record-ro
 Existing users: Settings → Check for updates → Update now. If the first reopen still shows an earlier release, reopen once more and check again. Settings should show **UI build 22**. Normal cold launches open Home; unlocking after a window switch preserves the current page. Explicit notification/manifest shortcut launches retain their destinations. Offline app files are read from one release cache, never a different waiting release.
 
 The package does not contain users' ledger/PIN data. No Android build or browser/device runtime tests were run for this delivery. JavaScript syntax, local module references, service-worker shell paths and ZIP contents were checked.
+
+
+UI build 24: Home has a dedicated dashboard renderer. Main-tab navigation is scoped to the navigation buttons. A screen-render failure replaces the content with its own retry message instead of leaving another screen visible under the selected tab.

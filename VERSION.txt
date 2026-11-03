@@ -1,0 +1,2 @@
+Nidhi PWA UI build 25
+The PIN screen and Settings show UI build 25.
