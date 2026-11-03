@@ -1,0 +1,2 @@
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function recordRow({title,subtitle,amount,color,attribute,id}){return `<button type="button" class="ledger-row" ${attribute}="${esc(id)}"><span class="ledger-row-copy"><span class="ledger-row-title"><i style="background:${color}"></i>${esc(title)}</span><small>${esc(subtitle)}</small></span><b>${esc(amount)} <span aria-hidden="true">›</span></b></button>`}
