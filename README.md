@@ -105,3 +105,12 @@ Home's This month, Stats' Period totals and History's Filtered totals use the sa
 The Android working copy uses shared CategoryBreakdownView and PeriodTotalsCard components, totals below the type tabs, single-line large-amount sizing, segmented tabs, matching category colours and category-row layout. Stats content scrolls as a whole to keep its categories accessible on smaller devices. Existing records, database schema and non-UI native functions are unchanged.
 
 Replace all files at the same GitHub Pages URL, apply Update now, and confirm UI build 27 on the PIN screen or in Settings. JavaScript syntax, local module/shell references, Android XML and ZIP integrity were checked. No Gradle build or device/browser runtime tests were run.
+
+
+## UI build 28 — Home toolbar and compact search
+
+Home shows the month selector and chart shortcut on the left of the app bar and Home on the right. The duplicate heading/control row below is hidden. The Home manual-entry/import cards remain accessible. History search is initially collapsed: tap Search to expand, and Close to clear the query and recover the space. Type, account and period filters remain available.
+
+The Android working copy at F:\Android\MoneyLedger now follows the PWA's card surfaces, theme/accent colours, system sans-serif hierarchy, ledger-row layout, day-card headers, compact search/account tools, Home toolbar/month selector and bottom navigation sizes. Android's native-only functionality and local Room database are retained. `visual-reference.json` records the shared layout and colour values. Android dp/sp and web CSS pixels remain subject to the device's font/display scaling; this release has not undergone a side-by-side device comparison.
+
+Upload all contents to the same GitHub Pages root. Apply Update now and confirm UI build 28. Do not clear site data. JavaScript syntax/module references, Android XML, referenced Material API availability and ZIP integrity were checked. No Gradle builds, device tests or browser runtime tests were run.

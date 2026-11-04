@@ -1,0 +1,49 @@
+{
+  "card": {
+    "radius": 22,
+    "padding": 16,
+    "gap": 14,
+    "elevation": 0
+  },
+  "row": {
+    "title": 14,
+    "subtitle": 11,
+    "amount": 13,
+    "verticalPadding": 17,
+    "dot": 8
+  },
+  "totals": {
+    "title": 14,
+    "label": 10,
+    "amountMax": 16,
+    "amountMin": 10
+  },
+  "toolbar": {
+    "height": 62,
+    "homeTitle": 18,
+    "screenTitle": 16
+  },
+  "navigation": {
+    "height": 70,
+    "label": 10,
+    "icon": 22
+  },
+  "light": {
+    "background": "#f5f6f3",
+    "surface": "#ffffff",
+    "text": "#202e29",
+    "muted": "#7b847e",
+    "divider": "#e6eae3",
+    "income": "#26845f",
+    "expense": "#d2695e"
+  },
+  "dark": {
+    "background": "#111b18",
+    "surface": "#1a2621",
+    "text": "#edf2eb",
+    "muted": "#a1b0a6",
+    "divider": "#304038",
+    "income": "#75cfaa",
+    "expense": "#f09588"
+  }
+}

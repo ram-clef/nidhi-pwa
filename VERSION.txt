@@ -1,2 +1,2 @@
-Nidhi PWA UI build 27
-Shared compact totals cards and category charts for Home/Stats.
+Nidhi PWA UI build 28
+Home toolbar and expandable History search.
