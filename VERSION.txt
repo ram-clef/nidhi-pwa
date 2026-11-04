@@ -1,2 +1,2 @@
-Nidhi PWA UI build 28
-Home toolbar and expandable History search.
+Nidhi PWA UI build 29
+Home title left; month/year and chart icon right.

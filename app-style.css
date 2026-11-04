@@ -146,3 +146,8 @@ body:is([data-page=stats],[data-page=history]) .app-bar{gap:4px}body:is([data-pa
 .history-search-panel{display:flex;gap:8px;align-items:center;margin:0 0 12px;min-width:0}.history-search-panel[hidden]{display:none}.history-search-panel input{width:100%;min-width:0;flex:1;min-height:44px;padding:10px 12px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:12px;font-size:14px}.history-tools .toolbar{gap:8px}.history-tools .toolbar #account{flex:1;min-width:0;max-width:220px}.history-search-panel+.toolbar{margin-top:0}
 
 .history-tools .toolbar{display:flex;align-items:center;flex-wrap:nowrap}.history-tools .toolbar .icon-btn{flex:0 0 40px}.history-tools .toolbar #account{flex:1;min-width:0}.card{box-shadow:none!important}
+
+/* Home title left, month and Analyze controls right. */
+body[data-page=home] .app-identity{order:0;margin-left:0;margin-right:auto;justify-content:flex-start}
+body[data-page=home] .app-wordmark{text-align:left}
+body[data-page=home] #home-toolbar-controls{order:1;margin-left:auto;justify-content:flex-end}
