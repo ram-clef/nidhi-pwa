@@ -96,3 +96,12 @@ Stats and History share one Back/title/period/filter header. Stats begins with A
 The Android working copy at F:\Android\MoneyLedger has matching compact headers, period totals, Stats All tab, shared surface/transaction/chart colors and Plain/Mist/Dune/Aurora choices; its other wallpapers and native features are retained. No database schema change is needed for this UI update.
 
 Upload every file from this ZIP to the same GitHub Pages root, then apply Update now. The PIN screen and Settings show UI build 26. Do not clear site data. JavaScript syntax and local file references, Android XML and ZIP integrity were checked. No Gradle build or device/browser runtime tests were run.
+
+
+## UI build 27 — screenshot alignment
+
+Home's This month, Stats' Period totals and History's Filtered totals use the same compact amount-card component. Large values remain single-line with length-aware text sizing. Home's Where it goes and Stats' category breakdown share the ring, total-below-ring, legend and category palette. Period navigation forms a compact right-aligned group beside the period selector.
+
+The Android working copy uses shared CategoryBreakdownView and PeriodTotalsCard components, totals below the type tabs, single-line large-amount sizing, segmented tabs, matching category colours and category-row layout. Stats content scrolls as a whole to keep its categories accessible on smaller devices. Existing records, database schema and non-UI native functions are unchanged.
+
+Replace all files at the same GitHub Pages URL, apply Update now, and confirm UI build 27 on the PIN screen or in Settings. JavaScript syntax, local module/shell references, Android XML and ZIP integrity were checked. No Gradle build or device/browser runtime tests were run.

@@ -1,2 +1,2 @@
-Nidhi PWA UI build 26
-Combined Stats/History header, Stats All tab, daily History groups and filtered totals.
+Nidhi PWA UI build 27
+Shared compact totals cards and category charts for Home/Stats.
