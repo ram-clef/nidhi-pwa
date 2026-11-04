@@ -87,3 +87,12 @@ The package does not contain users' ledger/PIN data. No Android build or browser
 
 
 UI build 24: Home has a dedicated dashboard renderer. Main-tab navigation is scoped to the navigation buttons. A screen-render failure replaces the content with its own retry message instead of leaving another screen visible under the selected tab.
+
+
+## UI build 26
+
+Stats and History share one Back/title/period/filter header. Stats begins with All / Income / Expenses. History groups the visible records by local calendar day, with daily income/expense totals and overall totals that follow the period, type, account and search filters. Light/Dark/System selection is in Settings → Appearance. Analyze remains accessible from Home and Stats' Period totals card.
+
+The Android working copy at F:\Android\MoneyLedger has matching compact headers, period totals, Stats All tab, shared surface/transaction/chart colors and Plain/Mist/Dune/Aurora choices; its other wallpapers and native features are retained. No database schema change is needed for this UI update.
+
+Upload every file from this ZIP to the same GitHub Pages root, then apply Update now. The PIN screen and Settings show UI build 26. Do not clear site data. JavaScript syntax and local file references, Android XML and ZIP integrity were checked. No Gradle build or device/browser runtime tests were run.

@@ -1,2 +1,2 @@
-Nidhi PWA UI build 25
-The PIN screen and Settings show UI build 25.
+Nidhi PWA UI build 26
+Combined Stats/History header, Stats All tab, daily History groups and filtered totals.
